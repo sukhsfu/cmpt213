@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+    <title>CMPT 213 Online Hangman Game</title>
+</head>
+<body>
+<img style="margin-left:35%; margin-right:50%;" th:src="@{/images/hangman.png}" />
+<br>
+<br>
+<p style="margin-left:30%; margin-right:25%; color:red; font-size:35px">
+<th:block th:text="${promptMessage.message}">message</th:block>
+</p>
+<p style="margin-left:15%; margin-right:15%; color:blue; font-size:22px">Creator :- </p>
+<p style="margin-left:15%; margin-right:15%;" >Sukhwinder Singh</p>
+<p style="margin-left:15%; margin-right:15%;">301368460</p>
+<p style="margin-left:15%; margin-right:15%;">sukhwind@sfu.ca</p>
+<p style="margin-left:40%; margin-right:15%; color:blue; font-size:22px">Rules of the game</p>
+<p style="margin-left:15%; margin-right:15%;">Select an aplhabet. If the alphabet is contained in the word; then  alphabet is
+filled in the word, otherwise try is counted in  wrong guess. Game continues till maximum 7 wrong guesses, if player guess the word correctly he wins, otherwise loses.</p>
+<br>
+<br>
+<form action="#" th:action="@{/game}" method="post" th:object="${game}">
+<button type="submit" style="margin-left:40%; font-size:18px" >Start new game!</button>
+</form>
+</body>
+</html>

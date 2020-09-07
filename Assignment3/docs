@@ -1,0 +1,18 @@
+#hello messages
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/hello
+
+#add superhero
+curl -i -H "Content-Type: application/json" -X POST -d '{
+                                                        "name" : "Batman", "height" : 183.0, "numberOfCiviliansSaved" : 100, "superpower" : "Super rich"
+                                                        }' localhost:8080/add
+
+#listall
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listAll
+
+#removeSuperHero
+curl -i -H "Content-Type: application/json" -X POST localhost:8080/remove/3
+
+#updateSuperHero
+curl -i -H "Content-Type: application/json" -X POST -d '{
+                                                        "name" : "IronMan", "height" : 163.0, "numberOfCiviliansSaved" : 200, "superpower" : "Intelligent"
+                                                        }' localhost:8080/update/2
