@@ -1,0 +1,17 @@
+
+AUTHOR: OKAFOR EMMANUEL(301329115) - eokafor@sfu.ca
+AUTHOR: Sukhwinder Singh (301368460) - sukhwind@sfu.ca
+LAST MODIFIED DATE: 26/06/2020
+
+
+
+Question 1: Explain how the board will be drawn?
+Answer: First Board is filled with walls, then using the  recursive backtracking some of the walls are removed. After that all the
+2*2 blocks of walls are removed using the function and then similarly 2*2 blocks of open cells are removed. Then using breadth first search
+all the blocks that are not walls are made accessible from starting hero's position. Thus instance of board is created and passed to maze class.
+
+
+
+
+Question 2: How are the hero's movement handled?
+Answer: The hero's movement are handled using switch statements in the screen.java class. When the user enters either WASD, an integer number is passed into a respective function which decides how the game reacts to the movement.
